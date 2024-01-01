@@ -24,8 +24,8 @@ export default <Partial<Config>> {
         },
       },
       fontFamily: {
-        body: ['Rethink Sans', 'Roboto fallback', ...fontFamily.sans],
-        title: ['Work Sans', 'Inter fallback', ...fontFamily.sans],
+        body: ['Rethink Sans', 'Rethink Sans fallback', ...fontFamily.sans],
+        title: ['Work Sans', 'Work Sans fallback', ...fontFamily.sans],
       },
     },
   },
