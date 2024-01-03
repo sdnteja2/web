@@ -7,6 +7,19 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxtjs/fontaine',
   ],
+  content: {
+    documentDriven: true,
+    navigation: {
+      fields: ['navTitle'],
+    },
+    highlight: {
+      theme: {
+        default: 'github-light',
+        dark: 'github-dark',
+      },
+      preload: ['json', 'js', 'ts', 'html', 'css', 'vue', 'diff', 'shell', 'markdown', 'yaml', 'bash', 'ini', 'c', 'cpp'],
+    },
+  },
   ui: {
     global: true,
     icons: ['solar'],
