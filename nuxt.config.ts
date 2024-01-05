@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxtjs/google-fonts',
     '@nuxtjs/fontaine',
+    '@nuxt/image',
   ],
   content: {
     documentDriven: true,
