@@ -13,8 +13,8 @@ function togglePopover(open, close) {
       class="shadow-sm fixed z-50 top-0 w-full dark:backdrop-blur-md dark:bg-opacity-70 bg-opacity-70 backdrop-blur-md bg-slate-50 dark:bg-slate-950"
     >
       <UContainer class="container flex justify-between h-14 mx-auto">
-        <a rel="noopener noreferrer" href="/" aria-label="Back to homepage" class="flex items-center p-2">
-          Logo
+        <a rel="noopener noreferrer" href="/" aria-label="Back to homepage" class="flex items-center p-2"> <Logo />
+          SDN Teja II
         </a>
 
         <div class="flex items-center">

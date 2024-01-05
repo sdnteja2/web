@@ -3,7 +3,7 @@
 <template>
   <div>
     <!-- Testimonials -->
-    <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    <UContainer class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
       <!-- Grid -->
       <div class="md:grid md:grid-cols-2 md:gap-10 lg:gap-16 md:items-center">
         <div class="hidden md:block mb-24 md:mb-0 sm:px-6">
@@ -113,7 +113,7 @@
         <!-- End Col -->
       </div>
       <!-- End Grid -->
-    </div>
+    </UContainer>
     <!-- End Testimonials -->
   </div>
 </template>
