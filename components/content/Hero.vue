@@ -21,21 +21,25 @@ defineProps({
     <UContainer class="relative overflow-hidden">
       <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div class="max-w-2xl text-center mx-auto">
-          <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl dark:text-white">
+          <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="mt-3 text-lg text-gray-800 dark:text-gray-400">
+            Selamat datang di website resmi
+          </p>
+          <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="block text-3xl font-bold text-merah sm:text-6xl ">
             {{ title }}
           </h1>
           <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="mt-3 text-lg text-gray-800 dark:text-gray-400">
             {{ description }}
           </p>
         </div>
-
-        <NuxtImg
-          data-aos="fade-up"
-          data-aos-anchor-placement="top-bottom"
-          class="w-full h-auto mt-10"
-          :src="image"
-          :alt="title"
-        />
+        <div class=" mt-10 rounded-md mx-auto">
+          <img
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+            class="w-full md:h-[400px] object-cover bg-cover h-[200px] rounded-md"
+            :src="image"
+            :alt="title"
+          >
+        </div>
       </div>
     </UContainer>
     <!-- End Hero -->
