@@ -16,14 +16,24 @@ const items = [
         FASILITAS
       </h2>
     </div>
-    <div class="flex flex-wrap w-full justify-center items-center">
+    <div class="flex flex-wrap w-full justify-center items-start">
       <div class="w-full md:w-1/2 ">
         <UCarousel v-slot="{ item }" :items="items" :ui="{ item: 'basis-full' } " class="rounded-lg overflow-hidden" indicators arrows>
           <img :src="item" class="w-full" draggable="false">
         </UCarousel>
       </div>
       <div class="w-full md:w-1/2">
-        ini text nya
+        <ol>
+          <li>
+            1. Ruang Kelas
+          </li>
+          <li>
+            2. Perpustakaan
+          </li>
+          <li>
+            3. Laboratorium
+          </li>
+        </ol>
       </div>
     </div>
   </UContainer>
