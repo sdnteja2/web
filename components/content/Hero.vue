@@ -24,7 +24,7 @@ defineProps({
           <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="mt-3 text-lg text-gray-800 dark:text-gray-400">
             Selamat datang di website resmi
           </p>
-          <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="block text-3xl font-bold text-merah sm:text-6xl ">
+          <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="block text-3xl font-black text-merah sm:text-6xl ">
             {{ title }}
           </h1>
           <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="mt-3 text-lg text-gray-800 dark:text-gray-400">
