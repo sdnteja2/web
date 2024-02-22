@@ -40,7 +40,7 @@ onMounted(() => {
           class="rounded-lg overflow-hidden"
           indicators
         >
-          <img data-aos="fade-up" data-aos-anchor-placement="top-bottom" :src="item" class="w-full" draggable="false">
+          <NuxtImg data-aos="fade-up" data-aos-anchor-placement="top-bottom" :src="item" class="w-full" draggable="false" />
         </UCarousel>
       </div>
       <div class="w-full md:w-1/2 md:pl-4 md:pt-0 pt-2">

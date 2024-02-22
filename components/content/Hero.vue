@@ -32,13 +32,13 @@ defineProps({
           </p>
         </div>
         <div class=" mt-10 rounded-md mx-auto">
-          <img
+          <NuxtImg
             data-aos="fade-up"
             data-aos-anchor-placement="top-bottom"
             class="w-full md:h-[400px] object-cover bg-cover h-[200px] rounded-md"
             :src="image"
             :alt="title"
-          >
+          />
         </div>
       </div>
     </UContainer>
