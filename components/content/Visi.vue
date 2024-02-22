@@ -18,7 +18,7 @@ const items = [
 </script>
 
 <template>
-  <UContainer class="py-16 md:py-24 max-w-4xl mx-auto">
+  <UContainer class="py-16 md:py-24 max-w-5xl mx-auto">
     <UTabs data-aos="fade-up" :items="items" size="lg" :default-index="1">
       <template #misi>
         <div

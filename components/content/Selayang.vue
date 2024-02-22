@@ -27,7 +27,7 @@ defineProps({
       <div class="md:grid md:grid-cols-2  md:justify-center md:items-center">
         <div class="hidden  md:flex md:justify-center  mb-24 md:mb-0 sm:px-6">
           <div class="relative justify-center">
-            <img class="rounded-md h-[450px]" :src="foto" alt="Image Description">
+            <img data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="rounded-md h-[450px]" :src="foto" alt="Image Description">
           </div>
         </div>
         <!-- End Col -->
@@ -36,11 +36,11 @@ defineProps({
           <!-- Blockquote -->
           <blockquote class="relative">
             <div class="relative z-10">
-              <p class="text-xs font-semibold text-gray-500 tracking-wide uppercase mb-3 dark:text-gray-200">
+              <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="text-xs font-semibold text-gray-500 tracking-wide uppercase mb-3 dark:text-gray-200">
                 SELAYANG PANDANG
               </p>
 
-              <p class=" font-medium italic text-gray-800 md:text-2xl  dark:text-gray-400">
+              <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" class=" font-medium italic text-gray-800 md:text-2xl  dark:text-gray-400">
                 {{ ucapan }}
               </p>
             </div>
@@ -48,13 +48,13 @@ defineProps({
             <footer class="mt-6">
               <div class="flex items-center">
                 <div class="md:hidden flex-shrink-0">
-                  <img class="h-12 w-12 rounded-full" :src="foto" alt="Image Description">
+                  <img data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="h-12 w-12 rounded-full" :src="foto" alt="Image Description">
                 </div>
                 <div class="ms-4 md:ms-0">
-                  <div class="text-base font-semibold text-gray-800 dark:text-gray-200">
+                  <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="text-base font-semibold text-gray-800 dark:text-gray-200">
                     {{ nama }}
                   </div>
-                  <div class="text-xs text-gray-500 dark:text-gray-400">
+                  <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="text-xs text-gray-500 dark:text-gray-400">
                     {{ jabatan }}
                   </div>
                 </div>
