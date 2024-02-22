@@ -23,7 +23,7 @@ export default defineNuxtConfig({
   },
   ui: {
     global: true,
-    icons: ['solar'],
+    icons: ['solar', 'basil'],
   },
   googleFonts: {
     display: 'swap',
