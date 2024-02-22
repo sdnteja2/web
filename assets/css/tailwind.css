@@ -11,7 +11,7 @@
 
 @layer base {
   html {
-    @apply text-[18px] sm:text-[20px] scroll-smooth;
+    @apply text-[18px] sm:text-[20px] ;
   }
   body {
     @apply font-body bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-400;

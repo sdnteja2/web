@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { onMounted, ref } from 'vue'
+
 const items = [
   'https://picsum.photos/1920/1080?random=1',
   'https://picsum.photos/1920/1080?random=2',
@@ -19,7 +21,7 @@ onMounted(() => {
       return carouselRef.value.select(0)
 
     carouselRef.value.next()
-  }, 1000)
+  }, 3000)
 })
 </script>
 
@@ -46,13 +48,19 @@ onMounted(() => {
       <div class="w-full md:w-1/2 md:pl-4 md:pt-0 pt-2">
         <ul data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="list-disc pl-4 ">
           <li>
-            Ruang Kelas
+            Taman Baca
           </li>
           <li>
             Perpustakaan
           </li>
           <li>
-            Laboratorium
+            Laboratorium Komputer
+          </li>
+          <li>
+            UKS
+          </li>
+          <li>
+            Lapangan Olahraga
           </li>
         </ul>
       </div>

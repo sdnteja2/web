@@ -14,7 +14,7 @@ defineProps({
   },
   foto: {
     type: String,
-    default: '/img/dal.png',
+    default: '/img/guru/yusup.webp',
   },
 })
 </script>
