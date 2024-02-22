@@ -6,20 +6,18 @@
       <!-- Grid -->
       <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-10">
         <div class="col-span-full hidden lg:col-span-1 lg:block">
-          <a class="flex-none text-xl font-semibold dark:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#" aria-label="Brand">Brand</a>
+          <a class="flex-none text-xl font-semibold dark:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="/" aria-label="Brand"><Logo /></a>
           <p class="mt-3 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
-            © 2022 Preline.
+            SDN Teja II.
           </p>
         </div>
         <!-- End Col -->
 
         <div>
-          <h4 class="text-xs font-semibold text-gray-900 uppercase dark:text-gray-100">
-            Product
-          </h4>
+          
 
           <div class="mt-3 grid space-y-3 text-sm">
-            <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">Pricing</a></p>
+            <p><a class="inline-flex gap-x-2 font-semibold text-gray-900 hover:text-blue-400 dark:text-gray-100" href="http://disdik.majalengkakab.go.id/beranda">DISDIK  Majalengka</a></p>
             <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">Changelog</a></p>
             <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">Docs</a></p>
             <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">Download</a></p>

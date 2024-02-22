@@ -3,7 +3,7 @@
     <Navbar />
     <UContainer class="py-20 md:px-10 mx-auto">
       <!-- Title -->
-      <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+      <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
         <h1 class="">
           Guru & Staff
         </h1>
@@ -18,7 +18,7 @@
         <ContentList
           v-slot="{ list }" path="/guru/"
         >
-          <UCard v-for="guru in list" :key="guru._path" class="flex  flex-col p-2 w-full ">
+          <UCard v-for="guru in list" :key="guru._path" data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="flex  flex-col p-2 w-full ">
             <div class="flex items-center gap-x-4">
               <NuxtImg class="rounded-full bg-top bg-cover object-cover w-20 h-20" :src="guru.foto" alt="Image Description" />
               <div class="grow">
