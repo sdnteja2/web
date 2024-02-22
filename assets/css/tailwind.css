@@ -3,6 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .title {
+    @apply font-title text-center w-full text-lg md:text-3xl font-black 
+  }
+}
+
 @layer base {
   html {
     @apply text-[18px] sm:text-[20px] scroll-smooth;

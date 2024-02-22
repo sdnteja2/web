@@ -1,6 +1,10 @@
+/* eslint-disable unused-imports/no-unused-vars */
 /* eslint-disable ts/no-require-imports */
 import type { Config } from 'tailwindcss'
+
 import { fontFamily } from 'tailwindcss/defaultTheme'
+
+import plugin from 'tailwindcss/plugin'
 
 export default <Partial<Config>> {
 
@@ -29,7 +33,14 @@ export default <Partial<Config>> {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [
+    plugin(({ addComponents, theme }: { addComponents: any, theme: any }) => {
+      addComponents({
+        '.title': {},
+      })
+    }),
+    require('@tailwindcss/typography'),
+  ],
   content: [
     './components/**/*.{js,vue,ts}',
     './layouts/**/*.vue',

@@ -12,28 +12,28 @@ const items = [
 <template>
   <UContainer class="py-16">
     <div class="w-full text-center pb-8">
-      <h2 class="font-title text-lg md:text-3xl font-black ">
+      <h2 class="title">
         FASILITAS
       </h2>
     </div>
     <div class="flex flex-wrap w-full justify-center items-start">
-      <div class="w-full md:w-1/2 ">
+      <div class="w-full md:w-1/2 m ">
         <UCarousel v-slot="{ item }" :items="items" :ui="{ item: 'basis-full' } " class="rounded-lg overflow-hidden" indicators arrows>
           <img :src="item" class="w-full" draggable="false">
         </UCarousel>
       </div>
-      <div class="w-full md:w-1/2">
-        <ol>
+      <div class="w-full md:w-1/2 md:pl-4 md:pt-0 pt-2">
+        <ul class="list-disc pl-4 ">
           <li>
-            1. Ruang Kelas
+            Ruang Kelas
           </li>
           <li>
-            2. Perpustakaan
+            Perpustakaan
           </li>
           <li>
-            3. Laboratorium
+            Laboratorium
           </li>
-        </ol>
+        </ul>
       </div>
     </div>
   </UContainer>

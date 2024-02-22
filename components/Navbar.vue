@@ -65,6 +65,7 @@ function togglePopover(open, close) {
 <style scoped>
 a.router-link-active {
   color: #e53e3e;
+  font-weight: bold;
 }
 
 nav ul a {
