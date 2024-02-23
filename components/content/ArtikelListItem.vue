@@ -6,6 +6,8 @@ interface Article {
   title: string
   date: string
   description: string
+  cover: string
+  image: string
 
 }
 
@@ -33,48 +35,28 @@ const id = computed(() => {
 <template>
   <article
     v-if="article._path && article.title"
-    :class="{ featured }"
+
     :data-content-id="id"
+    class="h-full"
   >
-    <div v-if="article.cover" class="image">
-      <!-- <div v-if="article?.badges">
-        <span
-          v-for="(badge, index) in article.badges"
-          :key="index"
-          :style="{
-            backgroundColor: badge?.bg || 'rgba(0, 0, 0, 0.3)',
-            color: badge?.color || 'white',
-          }"
-        >
-          {{ typeof badge === 'string' ? badge : badge.content }}
-        </span>
-      </div> -->
+    <UCard class="h-full">
       <NuxtLink :to="article._path">
-        <NuxtImg
-          :src="article.cover"
-          :alt="article.title"
-          width="16"
-          height="9"
-        />
+        <div class="aspect-w-16 aspect-h-9">
+          <NuxtImg class="w-full object-cover rounded-lg" :src="article.image" :alt="article.title" />
+        </div>
+        <div class="w-full  justify-end flex my-2">
+          <UBadge size="xs" class="">
+            <time>
+              {{ formatDate(article.date) }}
+            </time>
+          </UBadge>
+        </div>
+        <div class="mb-2">
+          <h2 class="font-semibold font-body leading-tight text-gray-800 dark:text-gray-300 ">
+            {{ article.title }}
+          </h2>
+        </div>
       </NuxtLink>
-    </div>
-
-    <div class="content">
-      <NuxtLink
-        :to="article._path"
-        class="headline"
-      >
-        <h1>
-          {{ article.title }}
-        </h1>
-      </NuxtLink>
-
-      <p class="description">
-        {{ article.description }}
-      </p>
-      <!-- <time>
-        {{ formatDate(article.date) }}
-      </time> -->
-    </div>
+    </UCard>
   </article>
 </template>

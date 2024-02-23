@@ -146,7 +146,7 @@ const parentPath = computed(
                 :alt="page.title"
               />
             </header>
-            <div clasa="prose">
+            <div class="prose prose-lg">
               <slot />
             </div>
             <div class="space-y-3">
