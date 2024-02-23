@@ -18,11 +18,11 @@
         <ContentList v-slot="{ list }" path="/guru/">
           <UCard
             v-for="guru in list" :key="guru._path" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
-            class="flex  flex-col p-2 w-full "
+            class=""
           >
             <div class="flex items-center gap-x-4">
               <NuxtImg
-                class="rounded-full bg-top bg-cover object-cover w-20 h-20" :src="guru.foto"
+                class="rounded-full bg-top bg-cover object-cover w-16 h-16" :src="guru.foto"
                 alt="Image Description"
               />
               <div class="grow">
@@ -37,24 +37,27 @@
                 </p>
               </div>
             </div>
+
             <p class="italic py-2 text-sm">
               "{{ guru.quotes }}"
             </p>
             <!-- Social Brands -->
-            <div class="w-full flex justify-end items-center">
-              <UButton
-                icon="i-basil-instagram-outline" size="sm" color="primary" variant="ghost" square to="/"
-                target="_blank"
-              />
-              <UButton
-                icon="i-basil-facebook-solid" size="sm" color="primary" variant="ghost" square to="/"
-                target="_blank"
-              />
-              <UButton
-                icon="i-basil-gmail-outline" size="sm" color="primary" variant="ghost" square to="/"
-                target="_blank"
-              />
-            </div>
+            <template #footer>
+              <div class="w-full flex justify-end items-center">
+                <UButton
+                  icon="i-basil-instagram-outline" size="sm" color="primary" variant="ghost" square to="/"
+                  target="_blank"
+                />
+                <UButton
+                  icon="i-basil-facebook-solid" size="sm" color="primary" variant="ghost" square to="/"
+                  target="_blank"
+                />
+                <UButton
+                  icon="i-basil-gmail-outline" size="sm" color="primary" variant="ghost" square to="/"
+                  target="_blank"
+                />
+              </div>
+            </template>
             <!-- End Social Brands -->
           </UCard>
         </contentlist>

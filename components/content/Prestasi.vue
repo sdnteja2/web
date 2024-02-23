@@ -42,7 +42,7 @@ const prestasi = [{
 
 <template>
   <UContainer class="py-16">
-    <div class="pb-4">
+    <div class="pb-8">
       <h2 data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="title">
         PRESTASI SDN TEJA II
       </h2>
