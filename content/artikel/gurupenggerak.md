@@ -1,8 +1,9 @@
 ---
 title: "Pendidikan Guru Penggerak: Membangun Fondasi Masa Depan Bangsa Melalui Pendidikan Berkualitas"
 date: 2023-12-31
-author: [Nama Penulis]
 description: "Artikel ini membahas peran penting guru penggerak dalam sistem pendidikan dan bagaimana pendidikan mereka yang mendalam dapat membantu membangun masa depan yang lebih cerah bagi generasi muda."
+image: "/img/dal.png"
+layout: artikel
 ---
 
 Pendidikan adalah kunci bagi kemajuan suatu bangsa. Guru memiliki peran penting dalam membentuk masa depan generasi muda. Namun, tidak semua guru adalah sama. Ada kelompok guru yang disebut sebagai "guru penggerak," yang memiliki dampak yang luar biasa pada siswa dan sistem pendidikan. Artikel ini akan mengulas tentang pentingnya pendidikan guru penggerak dan bagaimana pendidikan mereka harus ditingkatkan untuk memastikan pendidikan berkualitas.

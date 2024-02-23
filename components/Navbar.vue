@@ -35,7 +35,7 @@ function togglePopover(open, close) {
           </div>
           <div class="md:hidden overflow-auto">
             <UPopover :popper="{ placement: 'top-end' }">
-              <UButton variant="ghost" trailing-icon="i-solar-menu-dots-bold" />
+              <UButton variant="ghost" trailing-icon="i-basil-menu-solid" />
               <template #panel="{ open, close }">
                 <div
                   class="p-4 dark:backdrop-blur-md dark:bg-opacity-70 bg-opacity-70 backdrop-blur-md bg-slate-50 dark:bg-slate-950"
