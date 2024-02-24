@@ -13,6 +13,9 @@ export default defineNuxtConfig({
     navigation: {
       fields: ['navTitle'],
     },
+    markdown: {
+      anchorLinks: false,
+    },
     highlight: {
       theme: {
         default: 'github-light',

@@ -8,21 +8,21 @@ export default defineAppConfig({
       constrained: 'max-w-7xl',
     },
     card: {
-      base: 'relative group isolate rounded-xl background-gradient ring-1 ring-gray-200 dark:ring-gray-800 before:hidden before:lg:block before:absolute before:-inset-[2px] before:h-[calc(100%+4px)] before:w-[calc(100%+4px)] before:z-[-1] before:rounded-[13px] flex-1 flex flex-col shadow hover:ring-primary-500 dark:hover:ring-primary-400 transition-all duration-200',
+      base: 'relative group isolate rounded-xl background-gradient ring-1 ring-gray-200 dark:ring-gray-800  flex-1 flex flex-col shadow hover:ring-primary-500 dark:hover:ring-primary-400 transition-all duration-500',
       background: 'bg-white dark:bg-gray-900 hover:bg-opacity-90 dark:hover:bg-opacity-90 transition-[background-opacity] ',
-      divide: 'divide-y divide-gray-200 dark:divide-gray-800',
+      divide: 'divide-y divide-gray-200  dark:divide-gray-800',
       ring: '',
       rounded: 'rounded-lg',
       shadow: 'shadow',
       body: {
-        base: 'flex-1 flex flex-col overflow-hidden gap-x-8 gap-y-4 rounded-xl flex-1 flex flex-col',
+        base: 'flex-1 flex flex-col overflow-hidden gap-x-8 gap-y-4 ',
         background: '',
         padding: 'p-3  sm:p-4',
       },
       header: {
         base: '',
         background: '',
-        padding: 'px-4 py-5 sm:px-6',
+        padding: 'px-4 py-4 sm:px-6',
       },
       footer: {
         base: '',

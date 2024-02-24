@@ -10,11 +10,16 @@ function togglePopover(open, close) {
 <template>
   <nav>
     <header
-      class="shadow-sm fixed z-50 top-0 w-full dark:backdrop-blur-md dark:bg-opacity-70 bg-opacity-70 backdrop-blur-md bg-slate-50 dark:bg-slate-950"
+      class="shadow-sm fixed z-50 top-0 w-full dark:backdrop-blur-md dark:bg-opacity-70 bg-opacity-70 backdrop-blur-md bg-slate-50 dark:bg-slate-900"
     >
-      <UContainer class="container flex justify-between h-14 mx-auto">
-        <a rel="noopener noreferrer" href="/" aria-label="Back to homepage" class="flex items-center p-2"> <Logo />
-          SDN Teja II
+      <UContainer class=" flex justify-between h-14 mx-auto">
+        <a rel="noopener noreferrer" href="/" aria-label="Back to homepage" class="flex items-center">
+
+          <Logo />
+          <div class="pl-2 font-semibold">
+
+            SDN Teja II
+          </div>
         </a>
 
         <div class="flex items-center">
@@ -22,7 +27,7 @@ function togglePopover(open, close) {
             <ContentNavigation v-slot="{ navigation }">
               <ul class="flex space-x-2">
                 <li v-for="link of navigation" :key="link._path">
-                  <NuxtLink class="w-full flex  px-2 py-1" :to="link._path">
+                  <NuxtLink class="w-full flex  px-1 py-1" :to="link._path">
                     <span class="underline-fx" /> {{ link.title }}
                   </NuxtLink>
                 </li>
