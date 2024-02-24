@@ -37,6 +37,7 @@ function togglePopover(open, close) {
           </div>
           <div class="flex justify-end">
             <DarkMode />
+            <DocsSearchButton />
           </div>
           <div class="md:hidden overflow-auto">
             <UPopover :popper="{ placement: 'top-end' }">

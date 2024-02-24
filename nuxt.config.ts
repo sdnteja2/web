@@ -7,9 +7,17 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxtjs/fontaine',
     '@nuxt/image',
+    '@nuxtjs/seo',
   ],
+  site: {
+    url: 'https://sdnteja2.sch.id',
+    name: 'SDN TEJA 2',
+    description: 'Website resmi SDN Teja 2, Kecamatan Rajagaluh, Kabupaten Majalengka, Jawa Barat',
+    defaultLocale: 'id', // not needed if you have @nuxtjs/i18n installed
+  },
   content: {
     documentDriven: true,
+
     navigation: {
       fields: ['navTitle'],
     },
