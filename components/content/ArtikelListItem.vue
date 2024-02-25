@@ -44,7 +44,7 @@ const id = computed(() => {
         <div class="aspect-w-16 aspect-h-9">
           <NuxtImg class="w-full object-cover rounded-lg" :src="article.image" :alt="article.title" />
         </div>
-        <div class="w-full  justify-end flex my-2">
+        <div class="w-full  justify-end flex my-4">
           <UBadge size="xs" class="">
             <time>
               {{ formatDate(article.date) }}
@@ -57,6 +57,13 @@ const id = computed(() => {
           </h2>
         </div>
       </NuxtLink>
+      <template #footer>
+        <div class="flex flex-row space-x-2">
+          <UBadge v-for="(tag, n) in article.tags" :key="n" size="xs" class="uppercase">
+            {{ tag }}
+          </UBadge>
+        </div>
+      </template>
     </UCard>
   </article>
 </template>

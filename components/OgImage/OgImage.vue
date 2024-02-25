@@ -23,7 +23,7 @@ defineProps({
 <template>
   <div class="w-full h-full flex flex-col justify-between items-start bg-[#0f172a] p-20 pt-26 pb-16">
     <div>
-      <h1 class="text-[#F22727] mb-4 font-bold  flex items-center" :class="title?.length > 50 ? 'text-4xl' : 'text-5xl'">
+      <h1 class="text-[#F22727] mb-4 font-bold  flex items-center" :class="title?.length > 50 ? 'text-5xl' : 'text-6xl'">
         <span>{{ title }}</span>
         <img v-if="image" :src="image" class="h-20 w-20 rounded ml-8">
       </h1>
@@ -31,8 +31,8 @@ defineProps({
         {{ description }}
       </p>
     </div>
-    <div class="flex flex-row items-center">
-      <Logo class="w-[60px] h-[60px] text-white" />
+    <div class="flex flex-row items-center bg-white p-2 rounded-md">
+      <Logo class="w-[60px] h-[48px] text-white" />
       <h2 class="pl-2 text-3xl font-bold text-[#F22727] ">
         SDN TEJA 2
       </h2>

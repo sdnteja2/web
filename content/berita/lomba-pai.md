@@ -1,9 +1,8 @@
 ---
 title: "Lomaba PAI"
 date: 2023-12-31
-description: "Artikel ini membahas peran penting guru penggerak dalam sistem pendidikan dan bagaimana pendidikan mereka yang mendalam dapat membantu membangun masa depan yang lebih cerah bagi generasi muda."
-image: "/img/dal.png"
-layout: artikel
+tags: [lomba, PAI]
+layout: berita
 icon: "i-ph-newspaper-clipping-duotone"
 ---
 

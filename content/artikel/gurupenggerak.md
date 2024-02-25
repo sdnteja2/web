@@ -5,6 +5,7 @@ description: "Artikel ini membahas peran penting guru penggerak dalam sistem pen
 image: "/img/dal.png"
 layout: artikel
 icon: "i-ph-note-duotone"
+tags: [Guru, Informasi]
 ---
 
 Pendidikan adalah kunci bagi kemajuan suatu bangsa. Guru memiliki peran penting dalam membentuk masa depan generasi muda. Namun, tidak semua guru adalah sama. Ada kelompok guru yang disebut sebagai "guru penggerak," yang memiliki dampak yang luar biasa pada siswa dan sistem pendidikan. Artikel ini akan mengulas tentang pentingnya pendidikan guru penggerak dan bagaimana pendidikan mereka harus ditingkatkan untuk memastikan pendidikan berkualitas.
