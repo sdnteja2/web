@@ -39,24 +39,37 @@ const id = computed(() => {
     :data-content-id="id"
     class="h-full"
   >
-    <NuxtLink :to="berita._path">
-      <UCard class="h-full">
+    <UCard
+      :ui="{
+        footer: {
+          padding: 'px-2 py-2 sm:px-4',
+        },
+      }"
+      class="h-full"
+    >
+      <NuxtLink :to="berita._path">
         <div class="mb-2">
           <h2 class="font-bold text-lg line-clamp-3 font-body leading-tight text-gray-800 dark:text-gray-300 ">
             {{ berita.title }}
           </h2>
         </div>
-
-        <template #footer>
-          <div class="w-full  justify-end flex ">
-            <UBadge size="xs" class="">
-              <time>
-                {{ formatDate(berita.date) }}
-              </time>
-            </UBadge>
+      </NuxtLink>
+      <template #footer>
+        <div class="w-full  justify-between flex ">
+          <div v-if="berita?.tags">
+            <div class="flex flex-row space-x-2">
+              <UBadge v-for="(tag, n) in berita.tags" :key="n" size="xs" class="uppercase">
+                {{ tag }}
+              </UBadge>
+            </div>
           </div>
-        </template>
-      </UCard>
-    </NuxtLink>
+          <UBadge size="xs" class="">
+            <time>
+              {{ formatDate(berita.date) }}
+            </time>
+          </UBadge>
+        </div>
+      </template>
+    </UCard>
   </article>
 </template>

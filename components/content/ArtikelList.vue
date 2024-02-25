@@ -15,7 +15,7 @@ const articles = computed(() => _articles.value || [])
 </script>
 
 <template>
-  <UContainer v-if="articles?.length" class="articles-list">
+  <UContainer v-if="articles?.length" class="py-4 md:py-8 ">
     <div class="max-w-[85rem] ">
       <!-- Title -->
       <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">

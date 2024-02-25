@@ -31,8 +31,8 @@ defineProps({
         {{ description }}
       </p>
     </div>
-    <div class="flex flex-row items-center bg-white p-2 rounded-md">
-      <Logo class="w-[60px] h-[48px] text-white" />
+    <div class="flex flex-row items-center bg-white py-2 px-4 rounded-md">
+      <Logo class="w-[48px] h-[48px] text-white" />
       <h2 class="pl-2 text-3xl font-bold text-[#F22727] ">
         SDN TEJA 2
       </h2>

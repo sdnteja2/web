@@ -3,7 +3,7 @@
 <template>
   <div>
     <Navbar />
-    <div class="py-20">
+    <div class="py-4 md:py-8">
       <slot />
     </div>
     <Footer />

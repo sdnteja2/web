@@ -14,7 +14,7 @@ const guru = computed(() => _guru.value || [])
 </script>
 
 <template>
-  <UContainer class="py-20 md:px-10 mx-auto">
+  <UContainer class="py-4 md:py-8md:px-10 mx-auto">
     <div v-if="guru?.length">
       <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
         <h1 class="">

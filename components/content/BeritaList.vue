@@ -15,8 +15,8 @@ const beritas = computed(() => _berita.value || [])
 </script>
 
 <template>
-  <UContainer v-if="beritas?.length" class="beritas-list">
-    <div class="max-w-3xl mx-auto ">
+  <UContainer v-if="beritas?.length" class="py-4 md:py-8">
+    <div class="max-w-3xl  mx-auto ">
       <!-- Title -->
       <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
         <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="title">

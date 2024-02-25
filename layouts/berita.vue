@@ -25,7 +25,7 @@ const parentPath = computed(
 <template>
   <div>
     <Navbar />
-    <UContainer class="py-20 ">
+    <UContainer class="py-4 md:py-8 ">
       <div class="max-w-3xl mx-auto">
         <UBreadcrumb
           class="my-4 px-2 shadow py-1 ring-1 ring-gray-200 dark:ring-gray-800 rounded-lg text-lg sticky top-[72px] bg-white dark:bg-gray-900  inset-x-0 text-center z-30"
