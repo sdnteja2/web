@@ -42,7 +42,7 @@ const id = computed(() => {
     <NuxtLink :to="berita._path">
       <UCard class="h-full">
         <div class="mb-2">
-          <h2 class="font-bold text-xl  font-body leading-tight text-gray-800 dark:text-gray-300 ">
+          <h2 class="font-bold text-lg line-clamp-3 font-body leading-tight text-gray-800 dark:text-gray-300 ">
             {{ berita.title }}
           </h2>
         </div>
