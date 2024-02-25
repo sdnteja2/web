@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
   ],
   site: {
-    url: 'https://sdnteja2.sch.id',
+    url: 'https://teja2.vercel.app',
     name: 'SDN TEJA 2',
     description: 'Website resmi SDN Teja 2, Kecamatan Rajagaluh, Kabupaten Majalengka, Jawa Barat',
     defaultLocale: 'id', // not needed if you have @nuxtjs/i18n installed
@@ -32,9 +32,12 @@ export default defineNuxtConfig({
       preload: ['json', 'js', 'ts', 'html', 'css', 'vue', 'diff', 'shell', 'markdown', 'yaml', 'bash', 'ini', 'c', 'cpp'],
     },
   },
+  colorMode: {
+    preference: 'dark',
+  },
   ui: {
     global: true,
-    icons: ['solar', 'basil'],
+    icons: ['basil', 'ph'],
   },
   googleFonts: {
     display: 'swap',

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { babelParse } from 'vue/compiler-sfc'
+
 const isOpen = ref(false)
 
 const router = useRouter()
@@ -115,21 +117,32 @@ function onSelect(option: any) {
 
 <template>
   <div>
-    <UButton label="Open" @click="isOpen = true" />
-    <UModal v-model="isOpen">
+    <UButton icon="i-ph-magnifying-glass-duotone" color="gray" variant="ghost" @click="isOpen = true" />
+    <UModal
+      v-model="isOpen"
+      :ui="{
+        padding: 'sm:p-4',
+        rounded: 'sm:rounded-lg',
+        width: 'sm:max-w-3xl',
+        height: 'h-[300px]',
+      }"
+    >
       <!-- <pre> {{ queryGroups }}</pre> -->
       <UCommandPalette
+        placeholder="Cari..."
         command-attribute="title"
         :groups="groups"
         :close-button="{ icon: 'i-heroicons-x-mark-20-solid', color: 'gray', variant: 'ghost', size: 'sm' }"
+
         :fuse="{
           fuseOptions: {
             ignoreLocation: true,
             includeMatches: true,
             threshold: 0,
+
             keys: ['title', 'description', 'children.children.value', 'children.children.children.value'],
           },
-          resultLimit: 10,
+          resultLimit: 5,
         }"
 
         @update:model-value="onSelect"

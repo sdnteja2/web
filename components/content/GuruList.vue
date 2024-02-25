@@ -36,9 +36,11 @@ const guru = computed(() => _guru.value || [])
               alt="Image Description"
             />
             <div class="grow">
-              <h3 class="font-bold  text-merah ">
-                {{ list.nama }}
-              </h3>
+              <NuxtLink :to="list._path">
+                <h3 class="font-bold  text-merah ">
+                  {{ list.title }}
+                </h3>
+              </NuxtLink>
               <p class="text-xs ">
                 {{ list.jabatan }}
               </p>
@@ -49,7 +51,7 @@ const guru = computed(() => _guru.value || [])
           </div>
 
           <p class="italic py-2 text-sm">
-            "{{ list.quotes }}"
+            "{{ list.description }}"
           </p>
           <!-- Social Brands -->
           <template #footer>

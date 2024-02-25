@@ -35,7 +35,6 @@ const id = computed(() => {
 <template>
   <article
     v-if="article._path && article.title"
-
     :data-content-id="id"
     class="h-full"
   >
