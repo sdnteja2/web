@@ -22,11 +22,8 @@ defineProps({
 
 <template>
   <div class="w-full h-full flex flex-col justify-between items-start bg-[#0f172a] p-20 pt-26 pb-16">
-    <div
-      style="position: absolute;width: 1156px;height: 1000px;left: -215px;top: -337px;background: radial-gradient(50% 50% at 50% 50%, #F22727 0%, rgba(0, 220, 130, 0) 100%);filter: blur(180.5px);opacity: 0.5;"
-    />
     <div>
-      <h1 class="text-8xl mb-4 text-white flex items-center">
+      <h1 class="text-8xl mb-4 text-red flex items-center">
         <span>{{ title }}</span>
         <img v-if="image" :src="image" class="h-20 w-20 rounded ml-8">
       </h1>
@@ -34,7 +31,12 @@ defineProps({
         {{ description }}
       </p>
     </div>
-    <Logo class="w-[60px] h-[60px] text-white" />
+    <div class="flex flex-row">
+      <Logo class="w-[60px] h-[60px] text-white" />
+      <h2 class="pl-2 text-3xl font-bold">
+        SDN TEJA 2
+      </h2>
+    </div>
   </div>
 </template>
 

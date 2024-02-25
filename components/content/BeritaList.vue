@@ -5,39 +5,39 @@ import { withTrailingSlash } from 'ufo'
 const props = defineProps({
   path: {
     type: String,
-    default: 'artikel',
+    default: 'berita',
   },
 })
 
-const { data: _articles } = await useAsyncData('artikel', async () => await queryContent(withTrailingSlash(props.path)).sort({ date: -1 }).find())
+const { data: _berita } = await useAsyncData('berita', async () => await queryContent(withTrailingSlash(props.path)).sort({ date: -1 }).find())
 
-const articles = computed(() => _articles.value || [])
+const beritas = computed(() => _berita.value || [])
 </script>
 
 <template>
-  <UContainer v-if="articles?.length" class="articles-list">
-    <div class="max-w-[85rem] ">
+  <UContainer v-if="beritas?.length" class="beritas-list">
+    <div class="max-w-3xl mx-auto ">
       <!-- Title -->
       <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
         <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="title">
-          Artikel  SDN Teja II
+          Berita  SDN Teja II
         </h1>
         <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="mt-1 text-gray-600 dark:text-gray-400">
-          Artikel yang telah di publikasikan oleh SDN Teja II
+          Berita yang telah di publikasikan oleh SDN Teja II
         </p>
       </div>
       <!-- End Title -->
 
       <!-- Grid -->
       <div
-        class="grid md:grid-cols-2 lg:grid-cols-3   gap-6"
+        class="grid grid-cols-1 gap-6"
       >
         <!-- Card -->
         <div class="featured">
-          <ArtikelListItem :article="articles[0]" :featured="true" />
+          <BeritaListItem :berita="beritas[0]" :featured="true" />
         </div>
         <div class="layout">
-          <ArtikelListItem v-for="(article, index) in articles.slice(1)" :key="index" :article="article" />
+          <BeritaListItem v-for="(berita, index) in beritas.slice(1)" :key="index" :berita="berita" />
         </div>
         <!-- End Card -->
       </div>
@@ -45,11 +45,11 @@ const articles = computed(() => _articles.value || [])
     </div>
   </UContainer>
   <div v-else class="tour">
-    <p>Seems like there are no articles yet.</p>
+    <p>Seems like there are no beritas yet.</p>
     <p>
       You can start by
       <!-- eslint-disable-next-line -->
-      <ProseA href="https://alpine.nuxt.space/articles/write-articles">creating</ProseA> one in the <ProseCodeInline>articles</ProseCodeInline> folder.
+      <ProseA href="https://alpine.nuxt.space/beritas/write-beritas">creating</ProseA> one in the <ProseCodeInline>beritas</ProseCodeInline> folder.
     </p>
   </div>
 </template>

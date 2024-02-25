@@ -34,7 +34,8 @@ const id = computed(() => {
 
 <template>
   <article
-    v-if="article._path && article.title"
+    v-if="article._path && article.title" data-aos="fade-up"
+    data-aos-anchor-placement="top-bottom"
     :data-content-id="id"
     class="h-full"
   >
