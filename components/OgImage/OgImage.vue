@@ -34,7 +34,7 @@ defineProps({
         {{ description }}
       </p>
     </div>
-    <Logo class="w-[482px] h-[60px] text-white" />
+    <Logo class="w-[60px] h-[60px] text-white" />
   </div>
 </template>
 

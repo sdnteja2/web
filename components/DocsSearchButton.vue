@@ -121,6 +121,11 @@ function onSelect(option: any) {
     <UModal
       v-model="isOpen"
       :ui="{
+
+        container: 'flex min-h-full items-start sm:items-start justify-center text-center',
+
+        margin: 'sm:my-8',
+        base: 'relative text-left rtl:text-right overflow-hidden flex flex-col',
         padding: 'sm:p-4',
         rounded: 'sm:rounded-lg',
         width: 'sm:max-w-3xl',
