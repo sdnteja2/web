@@ -8,25 +8,53 @@ const props = defineProps({
     default: 'pembelajaran',
   },
 })
+const selected = ref([])
 
 const { data: _pembelajaran } = await useAsyncData('pembelajaran', async () => await queryContent(withTrailingSlash(props.path)).sort({ date: -1 }).find())
 
 const pembelajarans = computed(() => _pembelajaran.value || [])
+
+const listkelas = pembelajarans.value.map(pembelajaran => pembelajaran.kelas)
 </script>
 
 <template>
-  <UContainer class="pembelajarans-list">
-    <div class="max-w-3xl mx-auto ">
+  <UContainer v-if="pembelajarans?.length" class="py-4 md:py-8">
+    <div class="  mx-auto ">
       <!-- Title -->
       <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
         <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="title">
-          Berita  SDN Teja II
+          Pembelajaran  SDN Teja II
         </h1>
         <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="mt-1 text-gray-600 dark:text-gray-400">
           Berita yang telah di publikasikan oleh SDN Teja II
         </p>
       </div>
       <!-- End Title -->
+      <div class="py-6 w-full">
+        <USelectMenu v-model="selected" :options="listkelas" placeholder="Pilih Kelas" clear-search-on-close />
+      </div>
+      <!-- Grid -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-6"
+      >
+        <!-- Card -->
+        <div class="featured">
+          <PembelajaranListItem :pembelajaran="pembelajarans[0]" :featured="true" />
+        </div>
+        <div class="layout">
+          <PembelajaranListItem v-for="(pembelajaran, index) in pembelajarans.slice(1)" :key="index" :pembelajaran="pembelajaran" />
+        </div>
+        <!-- End Card -->
+      </div>
+      <!-- End Grid -->
     </div>
   </UContainer>
+  <div v-else class="tour">
+    <p>Seems like there are no beritas yet.</p>
+    <p>
+      You can start by
+      <!-- eslint-disable-next-line -->
+      <ProseA href="https://alpine.nuxt.space/beritas/write-beritas">creating</ProseA> one in the <ProseCodeInline>beritas</ProseCodeInline> folder.
+    </p>
+  </div>
 </template>

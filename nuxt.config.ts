@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/seo',
   ],
+
   site: {
     url: 'https://teja2.vercel.app',
     name: 'SDN TEJA 2',
@@ -72,6 +73,17 @@ export default defineNuxtConfig({
         root: 'assets',
       },
     ],
+  },
+  css: [
+    '~/node_modules/lite-youtube-embed/src/lite-yt-embed.css',
+  ],
+  build: {
+    transpile: ['lite-youtube'],
+  },
+  vue: {
+    compilerOptions: {
+      isCustomElement: tag => ['lite-youtube'].includes(tag),
+    },
   },
 
 })
