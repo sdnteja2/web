@@ -1,7 +1,7 @@
 ---
 title: "Lomaba PAI"
 date: 2023-12-31
-tags: [lomba, PAI]
+tags: [lomba, guru, pendidikan, agama]
 layout: berita
 icon: "i-ph-newspaper-clipping-duotone"
 ---

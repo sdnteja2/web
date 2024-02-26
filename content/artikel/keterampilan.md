@@ -5,6 +5,7 @@ description: "Menjadi guru di era digital menuntut berbagai keterampilan. Artike
 image: "/img/dal.png"
 layout: artikel
 icon: "i-ph-note-duotone"
+tags: [pendidikan, guru, informasi]
 ---
 
 ##  7 Keterampilan Dasar Wajib Bagi Guru:

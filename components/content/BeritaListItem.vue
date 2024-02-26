@@ -56,11 +56,13 @@ const id = computed(() => {
       </NuxtLink>
       <template #footer>
         <div class="w-full  justify-between flex ">
-          <div v-if="berita?.tags">
-            <div class="flex flex-row space-x-2">
-              <UBadge v-for="(tag, n) in berita.tags" :key="n" size="xs" class="uppercase">
-                {{ tag }}
-              </UBadge>
+          <div v-if="berita?.tags" class="flex flex-row space-x-2">
+            <div v-for="(tag, n) in berita.tags" :key="n">
+              <NuxtLink :to="`/tags#${tag}`" class="uppercase">
+                <UBadge size="xs">
+                  {{ tag }}
+                </UBadge>
+              </NuxtLink>
             </div>
           </div>
           <UBadge size="xs" class="">

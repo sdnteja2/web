@@ -59,9 +59,15 @@ const id = computed(() => {
       </NuxtLink>
       <template #footer>
         <div class="flex flex-row space-x-2">
-          <UBadge v-for="(tag, n) in article.tags" :key="n" size="xs" class="uppercase">
-            {{ tag }}
-          </UBadge>
+          <NuxtLink
+            v-for="(tag, n) in article.tags" :key="n"
+
+            :to="`/tags#${tag}`" class="uppercase"
+          >
+            <UBadge size="xs">
+              {{ tag }}
+            </UBadge>
+          </NuxtLink>
         </div>
       </template>
     </UCard>

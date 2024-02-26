@@ -20,6 +20,11 @@ const parentPath = computed(
     return pathTabl.join('/')
   },
 )
+
+defineOgImageComponent('OgImage', {
+  title: page.title,
+  description: page.description,
+})
 </script>
 
 <template>
