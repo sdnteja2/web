@@ -39,10 +39,33 @@ const id = computed(() => {
     :data-content-id="id"
     class="h-full"
   >
-    <UCard class="h-full">
-      <NuxtLink :to="article._path">
+    <UCard
+      :ui="
+        {
+          footer: {
+            padding: 'px-2 py-1.5 sm:px-4',
+          },
+          header: {
+            padding: 'px-2 py-1 sm:px-4',
+          },
+        }
+      "
+      class="h-full"
+    >
+      <NuxtLink
+        :to="article._path"
+        :title="article.title"
+      >
         <div class="aspect-w-16 aspect-h-9">
-          <NuxtImg class="w-full object-cover rounded-lg" :src="article.image" :alt="article.title" />
+          <NuxtImg
+            class="w-full object-cover rounded-lg"
+            :src="article.image"
+            :alt="article.title"
+            :title="article.title"
+            loading="lazy"
+            height="500"
+            width="500"
+          />
         </div>
         <div class="w-full  justify-end flex my-4">
           <UBadge size="xs" class="">
@@ -58,13 +81,15 @@ const id = computed(() => {
         </div>
       </NuxtLink>
       <template #footer>
-        <div class="flex flex-row space-x-2">
+        <div class="flex flex-wrap ">
           <NuxtLink
-            v-for="(tag, n) in article.tags" :key="n"
+            v-for="(tag, n) in article.tags"
+            :key="n" rel="tag"
+            :title="`Tags: ${tag}`"
 
             :to="`/tags#${tag}`" class="uppercase"
           >
-            <UBadge size="xs">
+            <UBadge size="xs" class="mr-2">
               {{ tag }}
             </UBadge>
           </NuxtLink>

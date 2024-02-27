@@ -32,13 +32,19 @@ defineProps({
           </p>
         </div>
         <div class=" mt-10 rounded-md mx-auto">
-          <NuxtImg
-            data-aos="fade-up"
-            data-aos-anchor-placement="top-bottom"
-            class="w-full md:h-[400px] object-cover bg-cover h-[200px] rounded-md"
-            :src="image"
-            :alt="title"
-          />
+          <div class="aspect-w-16 aspect-h-9">
+            <NuxtImg
+              class="w-full object-cover rounded-lg"
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom"
+              :src="image"
+              height="450"
+              width="720"
+              loading="lazy"
+              :alt="title"
+              :title="title"
+            />
+          </div>
         </div>
       </div>
     </UContainer>

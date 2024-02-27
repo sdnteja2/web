@@ -52,9 +52,9 @@ async function handleTagClick(tag) {
                 </div>
               </NuxtLink>
               <template #footer>
-                <div class="flex flex-row space-x-2">
+                <div class="flex flex-wrap">
                   <NuxtLink v-for="(tag, n) in content.tags" :key="n" :to="`/tags#${tag}`" class="uppercase" @click="handleTagClick(tag)">
-                    <UBadge size="xs">
+                    <UBadge size="xs" class="mr-2">
                       {{ tag }}
                     </UBadge>
                   </NuxtLink>

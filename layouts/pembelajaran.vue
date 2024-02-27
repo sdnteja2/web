@@ -21,10 +21,12 @@ defineOgImageComponent('OgImage', {
           <template #header>
             <div class="flex justify-between text-sm">
               <div v-if="page?.tags">
-                <div class="flex flex-row space-x-2">
-                  <UBadge v-for="(tag, n) in page.tags" :key="n" size="xs" class="uppercase">
-                    {{ tag }}
-                  </UBadge>
+                <div class="flex flex-wrap">
+                  <NuxtLink v-for="(tag, n) in page.tags" :key="n" :to="`/tags#${tag}`" class="uppercase">
+                    <UBadge size="xs" class="mr-2">
+                      {{ tag }}
+                    </UBadge>
+                  </NuxtLink>
                 </div>
               </div>
               <p v-else class="justify-end" />
@@ -58,5 +60,6 @@ defineOgImageComponent('OgImage', {
         </UCard>
       </div>
     </UContainer>
+    <Footer />
   </div>
 </template>

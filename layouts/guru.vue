@@ -9,7 +9,7 @@ defineOgImageComponent('OgImage', {
 <template>
   <div>
     <Navbar />
-    <UContainer class="py-4 md:py-8 mx-auto max-w-xl">
+    <UContainer class="py-14 md:py-16 mx-auto max-w-xl">
       <UBreadcrumb
         class="my-4 px-2 shadow py-1 ring-1 ring-gray-200 dark:ring-gray-800 rounded-lg text-lg bg-white dark:bg-gray-900  inset-x-0 text-center z-30"
         divider=">"
@@ -25,8 +25,10 @@ defineOgImageComponent('OgImage', {
               class="rounded-lg w-64 h-64 object-cover"
               :src="page.foto"
               :alt="page.title"
+              :title="page.title"
               width="500"
               height="500"
+              loading="lazy"
             />
           </div>
           <div class="py-4 text-sm">
@@ -96,16 +98,28 @@ defineOgImageComponent('OgImage', {
         <template #footer>
           <div class="w-full flex justify-end items-center">
             <UButton
-              icon="i-basil-instagram-outline" size="sm" color="primary" variant="ghost" square to="/"
+              icon="i-basil-instagram-outline" size="sm"
+              color="primary"
+              variant="ghost"
+              square
+              :to="page.instagram"
               target="_blank"
+              :title="`Follow ${page.title} on Instagram`"
             />
             <UButton
-              icon="i-basil-facebook-solid" size="sm" color="primary" variant="ghost" square to="/"
+              icon="i-basil-facebook-solid" size="sm"
+              color="primary"
+              variant="ghost"
+              square
+              :to="page.facebook"
               target="_blank"
+              :title="`Follow ${page.title} on Facebook`"
             />
             <UButton
-              icon="i-basil-gmail-outline" size="sm" color="primary" variant="ghost" square to="/"
+              icon="i-basil-gmail-outline" size="sm" color="primary" variant="ghost" square
+              :to="`mailto:${page.email}`"
               target="_blank"
+              :title="`Send an email to ${page.title}`"
             />
           </div>
         </template>

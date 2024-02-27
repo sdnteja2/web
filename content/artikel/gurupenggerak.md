@@ -5,7 +5,7 @@ description: "Artikel ini membahas peran penting guru penggerak dalam sistem pen
 image: "/img/dal.png"
 layout: artikel
 icon: "i-ph-note-duotone"
-tags: [pendidikan, guru]
+tags: [pendidikan, guru, abad 21, metal, guru dong, awas yah, lima, kckjkc, nkasc]
 ---
 
 Pendidikan adalah kunci bagi kemajuan suatu bangsa. Guru memiliki peran penting dalam membentuk masa depan generasi muda. Namun, tidak semua guru adalah sama. Ada kelompok guru yang disebut sebagai "guru penggerak," yang memiliki dampak yang luar biasa pada siswa dan sistem pendidikan. Artikel ini akan mengulas tentang pentingnya pendidikan guru penggerak dan bagaimana pendidikan mereka harus ditingkatkan untuk memastikan pendidikan berkualitas.
@@ -13,6 +13,14 @@ Pendidikan adalah kunci bagi kemajuan suatu bangsa. Guru memiliki peran penting 
 ## Apa itu Guru Penggerak?
 
 Guru penggerak adalah mereka yang tidak hanya mengajar, tetapi juga menginspirasi, memotivasi, dan membimbing siswa mereka untuk mencapai potensi terbaik mereka. Mereka bukan hanya pengajar, tetapi juga pemimpin yang memengaruhi perubahan dalam lingkungan belajar mereka. Guru penggerak adalah agen perubahan yang membantu mengangkat standar pendidikan.
+
+::gambar
+---
+title: "SDN Teja II"
+
+image: "/img/dal.png"
+---
+::
 
 ## Peran Penting Guru Penggerak
 

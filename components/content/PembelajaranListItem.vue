@@ -61,7 +61,12 @@ const id = computed(() => {
       </h2>
       <template #footer>
         <div>
-          <NuxtLink :to="pembelajaran.url">
+          <NuxtLink
+            rel="nofollow"
+            :title="pembelajaran.title"
+
+            :to="pembelajaran.url"
+          >
             Sumber: {{ pembelajaran.sumber }}
           </NuxtLink>
         </div>

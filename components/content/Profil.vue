@@ -111,6 +111,19 @@ defineProps({
             : -6.821242097490107, 108.34612476589537
           </div>
         </div>
+        <template #footer>
+          <div>
+            <UButton
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom"
+              color="primary"
+              to="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/10946411-2cf5-e011-b2b8-71cae28b2adc"
+              text="Lihat Detail"
+              block="true"
+              target="_blank"
+            />
+          </div>
+        </template>
       </UCard>
     </div>
   </UContainer>

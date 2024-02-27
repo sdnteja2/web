@@ -27,7 +27,14 @@ defineProps({
       <div class="md:grid md:grid-cols-2  md:justify-center md:items-center">
         <div class="hidden  md:flex md:justify-center  mb-24 md:mb-0 sm:px-6">
           <div class="relative justify-center">
-            <NuxtImg data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="rounded-md h-[450px]" :src="foto" alt="Image Description" />
+            <NuxtImg
+              data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="rounded-md object-cover h-[450px]" :src="foto"
+              width="380"
+              height="450"
+              loading="lazy"
+              :title="nama"
+              :alt="nama"
+            />
           </div>
         </div>
         <!-- End Col -->
@@ -48,7 +55,17 @@ defineProps({
             <footer class="mt-6">
               <div class="flex items-center">
                 <div class="md:hidden flex-shrink-0">
-                  <NuxtImg data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="h-12 w-12 rounded-full bg-cover object-cover" :src="foto" alt="Image Description" />
+                  <NuxtImg
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                    class="h-12 w-12 rounded-full bg-cover object-cover"
+                    width="200"
+                    height="200"
+                    loading="lazy"
+                    :src="foto"
+                    :title="nama"
+                    :alt="nama"
+                  />
                 </div>
                 <div class="ms-4 md:ms-0">
                   <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="text-base font-semibold text-gray-800 dark:text-gray-200">

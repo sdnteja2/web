@@ -2,12 +2,20 @@
 import { onMounted, ref } from 'vue'
 
 const items = [
-  'https://picsum.photos/1920/1080?random=1',
-  'https://picsum.photos/1920/1080?random=2',
-  'https://picsum.photos/1920/1080?random=3',
-  'https://picsum.photos/1920/1080?random=4',
-  'https://picsum.photos/1920/1080?random=5',
-  'https://picsum.photos/1920/1080?random=6',
+  '/img/fasilitas1.jpg',
+  '/img/fasilitas2.jpg',
+  '/img/fasilitas3.jpg',
+  '/img/fasilitas4.jpg',
+  '/img/fasilitas5.jpg',
+  '/img/fasilitas6.jpg',
+  '/img/fasilitas7.jpg',
+  '/img/fasilitas8.jpg',
+  '/img/fasilitas9.jpg',
+  '/img/fasilitas10.jpg',
+  '/img/fasilitas11.jpg',
+  '/img/fasilitas12.jpg',
+  '/img/fasilitas13.jpg',
+  '/img/fasilitas14.jpg',
 ]
 
 const carouselRef = ref()
@@ -33,16 +41,25 @@ onMounted(() => {
       </h2>
     </div>
     <div class="flex flex-wrap w-full justify-center items-start">
-      <div class="w-full md:w-1/2 m ">
+      <div class="w-full md:w-1/2">
         <UCarousel
           ref="carouselRef"
           v-slot="{ item }"
           :items="items"
           :ui="{ item: 'basis-full' }"
           class="rounded-lg overflow-hidden"
-          indicators
+
+          arrows
         >
-          <NuxtImg data-aos="fade-up" data-aos-anchor-placement="top-bottom" :src="item" class="w-full" draggable="false" />
+          <NuxtImg
+            data-aos="fade-up" data-aos-anchor-placement="top-bottom" :src="item" class="w-full h-48 md:h-72 object-cover rounded-md "
+            draggable="false"
+            height="480"
+            width="720"
+            loading="lazy"
+            title="fasilitas"
+            alt="fasilitas"
+          />
         </UCarousel>
       </div>
       <div class="w-full md:w-1/2 md:pl-4 md:pt-0 pt-2">

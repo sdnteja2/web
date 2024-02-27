@@ -33,13 +33,21 @@ const guru = computed(() => _guru.value || [])
           <div class="flex items-center gap-x-4">
             <NuxtImg
               class="rounded-full bg-top bg-cover object-cover w-16 h-16" :src="list.foto"
-              alt="Image Description"
+              :alt="list.title"
+              :title="`Foto ${list.title}`"
+              loading="lazy"
+              height="500"
+              width="500"
             />
             <div class="grow">
-              <NuxtLink :to="list._path">
-                <h3 class="font-bold  text-merah ">
+              <NuxtLink
+                :to="list._path"
+                :title="list.title"
+                rel="author"
+              >
+                <h2 class="font-bold  text-merah ">
                   {{ list.title }}
-                </h3>
+                </h2>
               </NuxtLink>
               <p class="text-xs ">
                 {{ list.jabatan }}
@@ -57,16 +65,28 @@ const guru = computed(() => _guru.value || [])
           <template #footer>
             <div class="w-full flex justify-end items-center">
               <UButton
-                icon="i-basil-instagram-outline" size="sm" color="primary" variant="ghost" square to="/"
+                icon="i-basil-instagram-outline" size="sm"
+                color="primary"
+                variant="ghost"
+                square
+                :to="list.instagram"
                 target="_blank"
+                :title="`Follow ${list.title} on Instagram`"
               />
               <UButton
-                icon="i-basil-facebook-solid" size="sm" color="primary" variant="ghost" square to="/"
+                icon="i-basil-facebook-solid" size="sm"
+                color="primary"
+                variant="ghost"
+                square
+                :to="list.facebook"
                 target="_blank"
+                :title="`Follow ${list.title} on Facebook`"
               />
               <UButton
-                icon="i-basil-gmail-outline" size="sm" color="primary" variant="ghost" square to="/"
+                icon="i-basil-gmail-outline" size="sm" color="primary" variant="ghost" square
+                :to="`mailto:${list.email}`"
                 target="_blank"
+                :title="`Send an email to ${list.title}`"
               />
             </div>
           </template>

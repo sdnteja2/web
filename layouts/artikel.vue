@@ -30,7 +30,7 @@ defineOgImageComponent('OgImage', {
 <template>
   <div>
     <Navbar />
-    <UContainer class="py-4 md:py-8 ">
+    <UContainer class="py-14 md:py-16">
       <div class="max-w-3xl mx-auto">
         <UBreadcrumb
           class="my-4 px-2 shadow py-1 ring-1 ring-gray-200 dark:ring-gray-800 rounded-lg text-lg  bg-white dark:bg-gray-900  inset-x-0 text-center z-30"
@@ -58,6 +58,8 @@ defineOgImageComponent('OgImage', {
               class=" object-cover rounded-xl"
               :src="page.image"
               :alt="page.title"
+              laoding="lazy"
+              :title="page.title"
               height="500"
               width="500"
             />
@@ -65,10 +67,25 @@ defineOgImageComponent('OgImage', {
           <p>
             {{ page.description }}
           </p>
+          <template #footer>
+            <div v-if="page?.tags">
+              <div class="flex flex-wrap ">
+                <NuxtLink
+                  v-for="(tag, n) in page.tags" :key="n"
+
+                  :to="`/tags#${tag}`" class="uppercase"
+                >
+                  <UBadge class="mr-2" size="xs">
+                    {{ tag }}
+                  </UBadge>
+                </NuxtLink>
+              </div>
+            </div>
+          </template>
         </UCard>
         <!-- konten -->
         <UCard class="my-4 ring-gray-200 dark:ring-gray-800  flex-1 flex flex-col shadow hover:ring-gray-200 dark:hover:ring-ring-gray-800">
-          <div class="prose mx-auto prose-red prose-sm sm:prose-base  dark:prose-invert">
+          <div class="prose mx-auto prose-merah prose-img:mx-auto prose-img:w-full prose-sm sm:prose-base  dark:prose-invert">
             <slot />
           </div>
         </UCard>
@@ -108,5 +125,6 @@ defineOgImageComponent('OgImage', {
         </div>
       </div>
     </UContainer>
+    <Footer />
   </div>
 </template>

@@ -42,34 +42,46 @@ const id = computed(() => {
     <UCard
       :ui="{
         footer: {
-          padding: 'px-2 py-2 sm:px-4',
+          padding: 'px-2 py-1 sm:px-4',
+        },
+        header: {
+          padding: 'px-2 py-1 sm:px-4',
         },
       }"
       class="h-full"
     >
-      <NuxtLink :to="berita._path">
+      <NuxtLink
+        :title="berita.title"
+        :to="berita._path"
+      >
         <div class="mb-2">
           <h2 class="font-bold text-lg line-clamp-3 font-body leading-tight text-gray-800 dark:text-gray-300 ">
             {{ berita.title }}
           </h2>
         </div>
       </NuxtLink>
-      <template #footer>
-        <div class="w-full  justify-between flex ">
-          <div v-if="berita?.tags" class="flex flex-row space-x-2">
-            <div v-for="(tag, n) in berita.tags" :key="n">
-              <NuxtLink :to="`/tags#${tag}`" class="uppercase">
-                <UBadge size="xs">
-                  {{ tag }}
-                </UBadge>
-              </NuxtLink>
-            </div>
-          </div>
+      <template #header>
+        <div class="w-full  flex justify-end ">
           <UBadge size="xs" class="">
             <time>
               {{ formatDate(berita.date) }}
             </time>
           </UBadge>
+        </div>
+      </template>
+      <template #footer>
+        <div v-if="berita?.tags" class="flex flex-wrap space-x-2">
+          <div v-for="(tag, n) in berita.tags" :key="n">
+            <NuxtLink
+              rel="tag"
+              :title="`Tags ${tag}`"
+              :to="`/tags#${tag}`" class="uppercase"
+            >
+              <UBadge size="xs">
+                {{ tag }}
+              </UBadge>
+            </NuxtLink>
+          </div>
         </div>
       </template>
     </UCard>
