@@ -6,4 +6,6 @@ kelas: 6
 url: https://www.youtube.com/watch?v=H3_RsCctGlg
 sumber: BS1 Tv
 tags: [interviews, dev-rel]
+layout: pembelajaran
+icon: i-ph-video-duotone
 ---
