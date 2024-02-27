@@ -33,6 +33,7 @@ defineProps({
         </div>
         <div class=" mt-10 rounded-md mx-auto">
           <div class="aspect-w-16 aspect-h-9">
+            <USkeleton class="aspect-w-16 aspect-h-9" :ui="{ rounded: 'rounded-md' }" />
             <NuxtImg
               class="w-full object-cover rounded-lg"
               data-aos="fade-up"
