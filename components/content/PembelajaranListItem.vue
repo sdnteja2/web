@@ -62,6 +62,7 @@ const id = computed(() => {
       <template #footer>
         <div>
           <NuxtLink
+            target="_blank"
             rel="nofollow"
             :title="pembelajaran.title"
 

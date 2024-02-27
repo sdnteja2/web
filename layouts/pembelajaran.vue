@@ -47,7 +47,7 @@ defineOgImageComponent('OgImage', {
 
           <template #footer>
             <div>
-              <NuxtLink :to="page.url">
+              <NuxtLink target="_blank" :to="page.url">
                 Sumber: {{ page.sumber }}
               </NuxtLink>
             </div>
