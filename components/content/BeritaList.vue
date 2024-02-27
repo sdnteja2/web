@@ -23,7 +23,7 @@ const beritas = computed(() => _berita.value || [])
           Berita  SDN Teja II
         </h1>
         <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="mt-1 text-gray-600 dark:text-gray-400">
-          Berita yang telah di publikasikan oleh SDN Teja II
+          Berita yang di publikasikan oleh SDN Teja II
         </p>
       </div>
       <!-- End Title -->

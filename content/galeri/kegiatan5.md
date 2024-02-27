@@ -1,7 +1,7 @@
 ---
 title: "Minum obat cacing"
 description: Kegiatan minum obat cacing
-tags: [interviews, dev-rel]
+tags: [Kegiatan]
 image: /img/galeri/kegiatan5.jpg
 layout: galeri
 icon: i-ph-image-duotone

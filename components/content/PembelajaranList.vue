@@ -23,10 +23,10 @@ const listkelas = pembelajarans.value.map(pembelajaran => pembelajaran.kelas)
       <!-- Title -->
       <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
         <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="title">
-          Pembelajaran  SDN Teja II
+          Pembelajaran
         </h1>
         <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="mt-1 text-gray-600 dark:text-gray-400">
-          Berita yang telah di publikasikan oleh SDN Teja II
+          Kumpulan Sumber Pembelajaran
         </p>
       </div>
       <!-- End Title -->

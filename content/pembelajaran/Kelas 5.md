@@ -5,7 +5,7 @@ video: H3_RsCctGlg
 kelas: 5
 url: https://www.youtube.com/watch?v=H3_RsCctGlg
 sumber: BS1 Tv
-tags: [interviews, dev-rel]
+tags: [Kegiatan]
 layout: pembelajaran
 icon: i-ph-video-duotone
 ---
