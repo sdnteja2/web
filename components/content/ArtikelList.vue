@@ -32,13 +32,8 @@ const articles = computed(() => _articles.value || [])
       <div
         class="grid md:grid-cols-2 lg:grid-cols-3   gap-6"
       >
-        <!-- Card -->
-        <div class="featured">
-          <ArtikelListItem :article="articles[0]" :featured="true" />
-        </div>
-        <div class="layout">
-          <ArtikelListItem v-for="(article, index) in articles.slice(1)" :key="index" :article="article" />
-        </div>
+        <ArtikelListItem v-for="(article, index) in articles.slice(0)" :key="index" :article="article" />
+
         <!-- End Card -->
       </div>
       <!-- End Grid -->

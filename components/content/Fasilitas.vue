@@ -60,6 +60,7 @@ onMounted(() => {
             loading="lazy"
             title="fasilitas"
             alt="fasilitas"
+            :placeholder="[50, 25, 75, 5]"
           />
         </UCarousel>
       </div>

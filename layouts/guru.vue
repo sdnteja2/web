@@ -29,6 +29,7 @@ defineOgImageComponent('OgImage', {
               width="500"
               height="500"
               loading="lazy"
+              :placeholder="[50, 25, 75, 5]"
             />
           </div>
           <div class="py-4 text-sm">

@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     name: 'SDN TEJA 2',
     description: 'Website resmi SDN Teja 2, Kecamatan Rajagaluh, Kabupaten Majalengka, Jawa Barat',
     defaultLocale: 'id', // not needed if you have @nuxtjs/i18n installed
+    themeColor: '#F22727',
   },
   content: {
     documentDriven: true,

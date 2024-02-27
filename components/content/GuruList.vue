@@ -38,6 +38,7 @@ const guru = computed(() => _guru.value || [])
               loading="lazy"
               height="500"
               width="500"
+              :placeholder="[50, 25, 75, 5]"
             />
             <div class="grow">
               <NuxtLink

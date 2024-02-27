@@ -17,13 +17,12 @@ function togglePopover(open, close) {
 
           <Logo />
           <div class="pl-2 font-semibold">
-
             SDN Teja II
           </div>
         </a>
 
         <div class="flex items-center">
-          <div class="hidden md:block">
+          <div class="hidden lg:block">
             <ContentNavigation v-slot="{ navigation }">
               <ul class="flex space-x-2">
                 <li v-for="link of navigation" :key="link._path">
@@ -38,11 +37,15 @@ function togglePopover(open, close) {
               <div />
             </ContentNavigation>
           </div>
-          <div class="flex justify-end">
-            <DarkMode />
-            <DocsSearchButton />
+          <div class="flex justify-end ml-4">
+            <UTooltip text="Dark Mode">
+              <DarkMode />
+            </UTooltip>
+            <UTooltip text="Pencarian">
+              <DocsSearchButton />
+            </UTooltip>
           </div>
-          <div class="md:hidden overflow-auto">
+          <div class="lg:hidden overflow-auto">
             <UPopover :popper="{ placement: 'top-end' }">
               <UButton color="gray" variant="ghost" trailing-icon="i-ph-list-duotone" />
               <template #panel="{ open, close }">

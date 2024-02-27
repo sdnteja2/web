@@ -18,7 +18,8 @@
     "@nuxt/ui": "^2.14.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "aos": "^2.3.4",
-    "lite-youtube-embed": "^0.3.0"
+    "lite-youtube-embed": "^0.3.0",
+    "vue-social-sharing": "next"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.1",

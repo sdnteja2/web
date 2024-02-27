@@ -15,7 +15,7 @@ defineOgImageComponent('OgImage', {
         <UBreadcrumb
           class="my-4 px-2 shadow py-1 ring-1 ring-gray-200 dark:ring-gray-800 rounded-lg text-lg  bg-white dark:bg-gray-900  inset-x-0 text-center z-30"
           divider=">"
-          :links="[{ label: 'Home', to: '/' }, { label: 'Pembelajaran', to: '/pembelajaran' }]"
+          :links="[{ label: 'Home', to: '/' }, { label: 'Galeri', to: '/galeri' }]"
         />
         <UCard class="ring-1 ring-gray-200 hover:ring-gray-200 dark:hover:ring-gray-800  dark:ring-gray-800  p-2  sm:p-3 bg-white dark:bg-gray-900">
           <template #header>
@@ -38,23 +38,21 @@ defineOgImageComponent('OgImage', {
         </UCard>
         <!-- konten -->
         <UCard class="my-4 ring-gray-200 dark:ring-gray-800  flex-1 flex flex-col shadow hover:ring-gray-200 dark:hover:ring-ring-gray-800">
-          <lite-youtube
-            class="mx-auto w-full"
-            :videoid="page.video"
-            :playlabel="page.title"
-            params="controls=2&start=10&end=30&modestbranding=2&rel=0&enablejsapi=1"
-          />
+          <div class="aspect-square max-w-3xl mx-auto ">
+            <NuxtImg
+              v-if="page.image"
+              class=" object-cover  w-full rounded-md"
+              :src="page.image"
+              :alt="page.title"
+              :title="page.title"
+              loading="lazy"
+              :placeholder="[50, 25, 75, 5]"
+            />
+          </div>
 
           <template #footer>
             <div>
-              <NuxtLink :to="page.url">
-                Sumber: {{ page.sumber }}
-              </NuxtLink>
-            </div>
-            <div class="w-full justify-end flex">
-              <UBadge color="gray">
-                Kelas {{ page.kelas }}
-              </UBadge>
+              <p>{{ page.title }}</p>
             </div>
           </template>
         </UCard>

@@ -23,6 +23,7 @@ defineProps({
       :title="title"
       height="500"
       width="500"
+      :placeholder="[50, 25, 75, 5]"
     />
   </div>
 </template>

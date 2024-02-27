@@ -1,5 +1,6 @@
 <!-- eslint-disable unused-imports/no-unused-vars -->
 <script setup lang="ts">
+const emit = defineEmits(['move'])
 const { page } = useContent()
 const route = useRoute()
 
@@ -20,6 +21,31 @@ const parentPath = computed(
     return pathTabl.join('/')
   },
 )
+const router = useRouter()
+const { activeHeadings, updateHeadings } = useScrollspy()
+watch(() => route.path, () => {
+  setTimeout(() => {
+    if (process.client) {
+      updateHeadings([
+        ...document.querySelectorAll('h2'),
+        ...document.querySelectorAll('h3'),
+      ])
+    }
+  }, 300)
+}, { immediate: true })
+
+function scrollToHeading(id: string) {
+  const element = document.getElementById(id)
+  if (element) {
+    window.setTimeout(() => {
+      window.scrollBy({
+        top: element.getBoundingClientRect().top - 65,
+        behavior: 'smooth',
+      })
+    }, 100)
+    emit('move', id)
+  }
+}
 
 defineOgImageComponent('OgImage', {
   title: page.title,
@@ -30,14 +56,14 @@ defineOgImageComponent('OgImage', {
 <template>
   <div>
     <Navbar />
-    <UContainer class="py-14 md:py-16">
+    <UContainer class="py-14 scroll-smooth md:py-16">
       <div class="max-w-3xl mx-auto">
         <UBreadcrumb
           class="my-4 px-2 shadow py-1 ring-1 ring-gray-200 dark:ring-gray-800 rounded-lg text-lg  bg-white dark:bg-gray-900  inset-x-0 text-center z-30"
           divider=">"
           :links="[{ label: 'Home', to: '/' }, { label: 'Artikel', to: '/artikel' }]"
         />
-        <UCard class="ring-1 ring-gray-200 hover:ring-gray-200 dark:hover:ring-gray-800  dark:ring-gray-800  p-2  sm:p-3 bg-white dark:bg-gray-900">
+        <UCard class="ring-1 ring-gray-200 hover:ring-gray-200 dark:hover:ring-gray-800   dark:ring-gray-800  p-2  sm:p-3 bg-white dark:bg-gray-900">
           <template #header>
             <div class="flex justify-between text-sm">
               <p v-if="page?.author">
@@ -62,6 +88,7 @@ defineOgImageComponent('OgImage', {
               :title="page.title"
               height="500"
               width="500"
+              :placeholder="[50, 25, 75, 5]"
             />
           </div>
           <p>
@@ -101,8 +128,11 @@ defineOgImageComponent('OgImage', {
                 <template #panel="{ close }">
                   <div class="p-3  w-80  ">
                     <h3>Daftar Isi</h3>
-                    <div v-for="link of page.body.toc.links" :key="link.id" class="flex flex-col  ">
-                      <a class="text-sm my-1 px-2 p-1 line-clamp-1 ring-1 rounded-md ring-gray-200 hover:ring-gray-400 dark:hover:ring-gray-600  dark:ring-gray-800 text-left" :href="`#${link.id}`" @click="close">{{ link.text }}</a>
+                    <div v-for="link of page.body.toc.links" :key="link.id" class="flex flex-col  " :class="{ 'ml-1': link.depth === 3 }">
+                      <a
+                        class="text-sm my-1 px-2 p-1 line-clamp-1 ring-1 rounded-md ring-gray-200 hover:ring-gray-400 dark:hover:ring-gray-600  dark:ring-gray-800 text-left" :href="`#${link.id}`" :class="[activeHeadings.includes(link.id) ? 'text-primary-500 dark:text-primary-400' : 'hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300']"
+                        @click.prevent="scrollToHeading(link.id)" @click="close"
+                      >{{ link.text }}</a>
                     </div>
                   </div>
                 </template>
@@ -114,8 +144,80 @@ defineOgImageComponent('OgImage', {
                     <UButton size="xs" color="white" trailing-icon="i-basil-share-box-solid" />
                   </UTooltip>
                   <template #panel>
-                    <div class="p-3">
-                      <h3>Share</h3>
+                    <div class="p-3 flex flex-row space-x-2">
+                      <ClientOnly>
+                        <ShareNetwork
+                          network="twitter"
+                          :url="`https://sdnteja2${page._path}`"
+                          :title="page.title"
+                          :description="page.description"
+                          :hashtags="page.tags"
+                          twitter-user="sdnteja2"
+                        >
+                          <UButton size="xs" color="white" variant="ghost" trailing-icon="i-ph-twitter-logo-duotone" />
+                        </ShareNetwork>
+                      </ClientOnly>
+
+                      <ClientOnly>
+                        <ShareNetwork
+                          network="linkedIn"
+                          :url="`https://sdnteja2${page._path}`"
+                          :title="page.title"
+                          :description="page.description"
+                          :hashtags="page.tags"
+                          twitter-user="sdnteja2"
+                        >
+                          <UButton size="xs" color="white" variant="ghost" trailing-icon="i-ph-linkedin-logo-duotone" />
+                        </ShareNetwork>
+                      </ClientOnly>
+                      <ClientOnly>
+                        <ShareNetwork
+                          network="telegram"
+                          :url="`https://sdnteja2${page._path}`"
+                          :title="page.title"
+                          :description="page.description"
+                          :hashtags="page.tags"
+                          twitter-user="sdnteja2"
+                        >
+                          <UButton size="xs" color="white" variant="ghost" trailing-icon="i-ph-telegram-logo-duotone" />
+                        </ShareNetwork>
+                      </ClientOnly>
+                      <ClientOnly>
+                        <ShareNetwork
+                          network="facebook"
+                          :url="`https://sdnteja2${page._path}`"
+                          :title="page.title"
+                          :description="page.description"
+                          :hashtags="page.tags"
+                          twitter-user="sdnteja2"
+                        >
+                          <UButton size="xs" color="white" variant="ghost" trailing-icon="i-ph-facebook-logo-duotone" />
+                        </ShareNetwork>
+                      </ClientOnly>
+                      <ClientOnly>
+                        <ShareNetwork
+                          network="email"
+                          :url="`https://sdnteja2${page._path}`"
+                          :title="page.title"
+                          :description="page.description"
+                          :hashtags="page.tags"
+                          twitter-user="sdnteja2"
+                        >
+                          <UButton size="xs" color="white" variant="ghost" trailing-icon="i-ph-envelope-simple-duotone" />
+                        </ShareNetwork>
+                      </ClientOnly>
+                      <ClientOnly>
+                        <ShareNetwork
+                          network="whatsapp"
+                          :url="`https://sdnteja2${page._path}`"
+                          :title="page.title"
+                          :description="page.description"
+                          :hashtags="page.tags"
+                          twitter-user="sdnteja2"
+                        >
+                          <UButton size="xs" color="white" variant="ghost" trailing-icon="i-ph-whatsapp-logo-duotone" />
+                        </ShareNetwork>
+                      </ClientOnly>
                     </div>
                   </template>
                 </UPopover>

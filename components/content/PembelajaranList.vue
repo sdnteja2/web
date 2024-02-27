@@ -38,12 +38,9 @@ const listkelas = pembelajarans.value.map(pembelajaran => pembelajaran.kelas)
         class="grid grid-cols-1 md:grid-cols-2 gap-6"
       >
         <!-- Card -->
-        <div class="featured">
-          <PembelajaranListItem :pembelajaran="pembelajarans[0]" :featured="true" />
-        </div>
-        <div class="layout">
-          <PembelajaranListItem v-for="(pembelajaran, index) in pembelajarans.slice(1)" :key="index" :pembelajaran="pembelajaran" />
-        </div>
+
+        <PembelajaranListItem v-for="(pembelajaran, index) in pembelajarans.slice(0)" :key="index" :pembelajaran="pembelajaran" />
+
         <!-- End Card -->
       </div>
       <!-- End Grid -->

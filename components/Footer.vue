@@ -11,9 +11,9 @@
       <!-- Grid -->
       <div class="grid grid-cols-2 md:grid-cols-4  gap-6 mb-10">
         <div>
-          <h3 class="text-xs font-semibold text-gray-900 uppercase dark:text-gray-100">
+          <h2 class="text-xs font-semibold text-gray-900 uppercase dark:text-gray-100">
             Teknologi Website
-          </h3>
+          </h2>
           <div class="mt-3 grid space-y-3 text-sm">
             <NuxtLink
               target="_blank"
@@ -46,9 +46,9 @@
           </div>
         </div>
         <div>
-          <h3 class="text-xs font-semibold text-gray-900 uppercase dark:text-gray-100">
+          <h2 class="text-xs font-semibold text-gray-900 uppercase dark:text-gray-100">
             Kabupaten
-          </h3>
+          </h2>
           <div class="mt-3 grid space-y-3 text-sm">
             <NuxtLink
               target="_blank"
@@ -85,9 +85,9 @@
         </div>
         <!-- End Col -->
         <div>
-          <h3 class="text-xs font-semibold  text-gray-900 uppercase dark:text-gray-100">
+          <h2 class="text-xs font-semibold  text-gray-900 uppercase dark:text-gray-100">
             Provinsi
-          </h3>
+          </h2>
           <div class="mt-3 grid space-y-3 text-sm">
             <NuxtLink
               target="_blank"
@@ -121,9 +121,9 @@
         </div>
         <!-- End Col -->
         <div>
-          <h3 class="text-xs font-semibold  text-gray-900 uppercase dark:text-gray-100">
+          <h2 class="text-xs font-semibold  text-gray-900 uppercase dark:text-gray-100">
             Nasional
-          </h3>
+          </h2>
           <div class="mt-3 grid space-y-3 text-sm">
             <NuxtLink
               target="_blank"

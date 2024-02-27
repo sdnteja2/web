@@ -1,8 +1,8 @@
 ---
-title: "Belajar Mengajar"
+title: "Kegiatan belajar mengajar Kelas 5"
 description: Kegiatan belajar mengajar Kelas 5
 tags: [interviews, dev-rel]
 image: /img/galeri/kegiatan1.jpg
-layout: pembelajaran
-icon: i-ph-video-duotone
+layout: galeri
+icon: i-ph-image-duotone
 ---

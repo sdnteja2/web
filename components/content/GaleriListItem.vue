@@ -35,7 +35,6 @@ const isOpen = ref(false)
     v-if="galeri._path && galeri.title" data-aos="fade-up"
     data-aos-anchor-placement="top-bottom"
     :data-content-id="id"
-    class="h-full"
   >
     <UCard
       :ui="{
@@ -46,30 +45,34 @@ const isOpen = ref(false)
           padding: 'px-2 py-2 sm:px-4',
         },
       }"
-      class="h-full"
     >
       <div class="aspect-square " @click="isOpen = true">
         <NuxtImg
           v-if="galeri.image"
-          class=" object-cover rounded-md"
+          class=" object-cover  rounded-md"
           :src="galeri.image"
           :alt="galeri.title"
           :title="galeri.title"
           loading="lazy"
           width="500"
           height="500"
+          :placeholder="[50, 25, 75, 5]"
         />
       </div>
-      <h2 class="capitalize">
-        {{ galeri.title }}
-      </h2>
+
       <template #footer>
         <div>
-          <p>{{ galeri.description }}</p>
+          <p class="line-clamp-1 text-sm">
+            {{ galeri.title }}
+          </p>
         </div>
       </template>
     </UCard>
-    <UModal v-model="isOpen">
+    <UModal
+      v-model="isOpen"
+      :ui="{
+        container: 'flex min-h-full items-center sm:items-center justify-center text-center' }"
+    >
       <UCard
         :ui="
           {
@@ -92,7 +95,7 @@ const isOpen = ref(false)
           class=" object-cover rounded-md aspect-video"
           :src="galeri.image"
           :alt="galeri.title"
-          placeholder="PHolder"
+          :placeholder="[50, 25, 75, 5]"
         />
         <template #footer>
           <p class="">

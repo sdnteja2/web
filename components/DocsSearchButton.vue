@@ -147,7 +147,7 @@ function onSelect(option: any) {
 
             keys: ['title', 'description', 'children.children.value', 'children.children.children.value'],
           },
-          resultLimit: 5,
+          resultLimit: 7,
         }"
 
         @update:model-value="onSelect"

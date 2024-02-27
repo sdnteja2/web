@@ -34,6 +34,7 @@ defineProps({
               loading="lazy"
               :title="nama"
               :alt="nama"
+              :placeholder="[50, 25, 75, 5]"
             />
           </div>
         </div>
@@ -65,6 +66,7 @@ defineProps({
                     :src="foto"
                     :title="nama"
                     :alt="nama"
+                    :placeholder="[50, 25, 75, 5]"
                   />
                 </div>
                 <div class="ms-4 md:ms-0">

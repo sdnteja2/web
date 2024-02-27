@@ -65,6 +65,7 @@ const id = computed(() => {
             loading="lazy"
             height="500"
             width="500"
+            :placeholder="[50, 25, 75, 5]"
           />
         </div>
         <div class="w-full  justify-end flex my-4">
