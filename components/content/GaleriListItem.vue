@@ -87,11 +87,12 @@ const isOpen = ref(false)
             <UButton color="gray" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1" @click="isOpen = false" />
           </div>
         </template>
-        <USkeleton class="aspect-w-16 aspect-h-9" :ui="{ rounded: 'rounded-md' }" />
+
         <NuxtImg
           class=" object-cover rounded-md aspect-video"
           :src="galeri.image"
           :alt="galeri.title"
+          placeholder="PHolder"
         />
         <template #footer>
           <p class="">
