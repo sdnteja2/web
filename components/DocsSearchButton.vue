@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { babelParse } from 'vue/compiler-sfc'
-
 const isOpen = ref(false)
 
 const router = useRouter()

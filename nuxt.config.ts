@@ -89,5 +89,12 @@ export default defineNuxtConfig({
       isCustomElement: tag => ['lite-youtube'].includes(tag),
     },
   },
-
+  routeRules: {
+    '/': { prerender: true },
+    '/guru/**': { prerender: true },
+    '/artikel/**': { isr: 60 * 10 },
+    '/berita/**': { isr: 60 * 10 },
+    '/pembelajaran/**': { isr: 60 * 10 },
+    '/galeri/**': { isr: 60 * 10 },
+  },
 })
