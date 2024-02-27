@@ -148,7 +148,7 @@ defineOgImageComponent('OgImage', {
                       <ClientOnly>
                         <ShareNetwork
                           network="twitter"
-                          :url="`https://sdnteja2${page._path}`"
+                          :url="`https://sdnteja2.sch.id${page._path}`"
                           :title="page.title"
                           :description="page.description"
                           :hashtags="page.tags"
@@ -161,7 +161,7 @@ defineOgImageComponent('OgImage', {
                       <ClientOnly>
                         <ShareNetwork
                           network="linkedIn"
-                          :url="`https://sdnteja2${page._path}`"
+                          :url="`https://sdnteja2.sch.id${page._path}`"
                           :title="page.title"
                           :description="page.description"
                           :hashtags="page.tags"
@@ -173,7 +173,7 @@ defineOgImageComponent('OgImage', {
                       <ClientOnly>
                         <ShareNetwork
                           network="telegram"
-                          :url="`https://sdnteja2${page._path}`"
+                          :url="`https://sdnteja2.sch.id${page._path}`"
                           :title="page.title"
                           :description="page.description"
                           :hashtags="page.tags"
@@ -185,7 +185,7 @@ defineOgImageComponent('OgImage', {
                       <ClientOnly>
                         <ShareNetwork
                           network="facebook"
-                          :url="`https://sdnteja2${page._path}`"
+                          :url="`https://sdnteja2.sch.id${page._path}`"
                           :title="page.title"
                           :description="page.description"
                           :hashtags="page.tags"
@@ -197,7 +197,7 @@ defineOgImageComponent('OgImage', {
                       <ClientOnly>
                         <ShareNetwork
                           network="email"
-                          :url="`https://sdnteja2${page._path}`"
+                          :url="`https://sdnteja2.sch.id${page._path}`"
                           :title="page.title"
                           :description="page.description"
                           :hashtags="page.tags"
@@ -209,7 +209,7 @@ defineOgImageComponent('OgImage', {
                       <ClientOnly>
                         <ShareNetwork
                           network="whatsapp"
-                          :url="`https://sdnteja2${page._path}`"
+                          :url="`https://sdnteja2.sch.id${page._path}`"
                           :title="page.title"
                           :description="page.description"
                           :hashtags="page.tags"
