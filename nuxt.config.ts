@@ -8,10 +8,13 @@ export default defineNuxtConfig({
     '@nuxtjs/fontaine',
     '@nuxt/image',
     '@nuxtjs/seo',
+    'nuxt-delay-hydration',
   ],
-
+  delayHydration: {
+    mode: 'mount',
+  },
   site: {
-    url: 'https://teja2.vercel.app',
+    url: 'https://sdnteja2.sch.id/',
     name: 'SDN TEJA 2',
     description: 'Website resmi SDN Teja 2, Kecamatan Rajagaluh, Kabupaten Majalengka, Jawa Barat',
     defaultLocale: 'id', // not needed if you have @nuxtjs/i18n installed

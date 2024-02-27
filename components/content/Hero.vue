@@ -31,8 +31,8 @@ defineProps({
             {{ description }}
           </p>
         </div>
-        <div class=" mt-10 rounded-md mx-auto">
-          <div class="aspect-w-16 aspect-h-9">
+        <div class="  mt-10 rounded-md ">
+          <div class="aspect-w-16 max-w-3xl mx-auto aspect-h-9">
             <NuxtImg
               class="w-full object-cover rounded-lg"
               data-aos="fade-up"
@@ -41,9 +41,10 @@ defineProps({
               height="450"
               width="720"
               loading="lazy"
-              :alt="title"
+
               :title="title"
               :placeholder="[50, 25, 75, 5]"
+              alt="Hero Image"
             />
           </div>
         </div>

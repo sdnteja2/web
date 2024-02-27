@@ -17,6 +17,8 @@
     "@nuxt/content": "^2.10.0",
     "@nuxt/ui": "^2.14.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@vercel/analytics": "^1.2.2",
+    "@vercel/speed-insights": "^1.0.10",
     "aos": "^2.3.4",
     "lite-youtube-embed": "^0.3.0",
     "vue-social-sharing": "next"
@@ -32,6 +34,7 @@
     "eslint": "^8.56.0",
     "eslint-plugin-format": "^0.1.0",
     "nuxt": "^3.10.3",
+    "nuxt-delay-hydration": "^1.3.3",
     "vue": "^3.4.0",
     "vue-router": "^4.2.5"
   }

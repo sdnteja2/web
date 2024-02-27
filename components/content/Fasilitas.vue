@@ -53,7 +53,7 @@ onMounted(() => {
         >
           <USkeleton class="aspect-w-16 aspect-h-9" :ui="{ rounded: 'rounded-md' }" />
           <NuxtImg
-            data-aos="fade-up" data-aos-anchor-placement="top-bottom" :src="item" class="w-full h-48 md:h-72 object-cover rounded-md "
+            data-aos="fade-up" data-aos-anchor-placement="top-bottom" :src="item" class="w-full h-48 md:h-64 object-cover rounded-md "
             draggable="false"
             height="480"
             width="720"
