@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/seo',
     'nuxt-delay-hydration',
-    '@nuxthq/studio',
+    // '@nuxthq/studio',sss
   ],
   delayHydration: {
     mode: 'mount',
