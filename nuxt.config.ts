@@ -11,6 +11,12 @@ export default defineNuxtConfig({
     'nuxt-delay-hydration',
 
   ],
+  image: {
+    storyblok: {
+      baseURL: 'https://a.storyblok.com',
+    },
+    format: ['webp'],
+  },
   delayHydration: {
     mode: 'mount',
   },

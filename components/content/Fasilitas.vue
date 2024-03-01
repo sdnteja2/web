@@ -2,20 +2,12 @@
 import { onMounted, ref } from 'vue'
 
 const items = [
-  '/img/fasilitas1.jpg',
-  '/img/fasilitas2.jpg',
-  '/img/fasilitas3.jpg',
-  '/img/fasilitas4.jpg',
-  '/img/fasilitas5.jpg',
-  '/img/fasilitas6.jpg',
-  '/img/fasilitas7.jpg',
-  '/img/fasilitas8.jpg',
-  '/img/fasilitas9.jpg',
-  '/img/fasilitas10.jpg',
-  '/img/fasilitas11.jpg',
-  '/img/fasilitas12.jpg',
-  '/img/fasilitas13.jpg',
-  '/img/fasilitas14.jpg',
+  'https://a.storyblok.com/f/255043/1416x1062/14a8939cf4/whatsapp-image-2024-02-27-at-16-14-10.jpeg',
+  'https://a.storyblok.com/f/255043/1416x1062/f4cfe8d8f4/whatsapp-image-2024-02-27-at-16-14-10-1.jpeg',
+  'https://a.storyblok.com/f/255043/1280x959/e6eab3e2d6/whatsapp-image-2024-02-27-at-16-14-08.jpeg',
+  'https://a.storyblok.com/f/255043/1280x959/a99d791feb/whatsapp-image-2024-02-27-at-16-14-07-1.jpeg',
+  'https://a.storyblok.com/f/255043/1280x959/350c22b6c0/whatsapp-image-2024-02-27-at-16-14-03-1.jpeg',
+
 ]
 
 const carouselRef = ref()
