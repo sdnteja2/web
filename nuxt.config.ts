@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/seo',
     'nuxt-delay-hydration',
-
+    '@nuxtjs/web-vitals',
   ],
   image: {
     storyblok: {
