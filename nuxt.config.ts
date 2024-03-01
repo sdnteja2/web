@@ -96,28 +96,28 @@ export default defineNuxtConfig({
       isCustomElement: tag => ['lite-youtube'].includes(tag),
     },
   },
-  routeRules: {
-    '/': { prerender: true },
-    '/guru/**': { prerender: true },
-    '/artikel/**': {
-      isr: 60 * 10,
-      prerender: true,
-    },
-    '/berita/**': {
-      isr: 60 * 10,
-      prerender: true,
-    },
-    '/pembelajaran/**': {
-      isr: 60 * 10,
-      prerender: true,
-    },
-    '/galeri/**': {
-      isr: 60 * 10,
-      prerender: true,
-    },
-    '/tags/**': {
-      isr: 60 * 10,
-      prerender: true,
-    },
-  },
+  // routeRules: {
+  //   '/': { prerender: true },
+  //   '/guru/**': { prerender: true },
+  //   '/artikel/**': {
+  //     isr: 60 * 10,
+  //     prerender: true,
+  //   },
+  //   '/berita/**': {
+  //     isr: 60 * 10,
+  //     prerender: true,
+  //   },
+  //   '/pembelajaran/**': {
+  //     isr: 60 * 10,
+  //     prerender: true,
+  //   },
+  //   '/galeri/**': {
+  //     isr: 60 * 10,
+  //     prerender: true,
+  //   },
+  //   '/tags/**': {
+  //     isr: 60 * 10,
+  //     prerender: true,
+  //   },
+  // },
 })
